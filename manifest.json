@@ -1,0 +1,17 @@
+{
+    "name": "darkmode.io",
+    "description": "change page from light mode to dark mode and vice versa",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": ["https://*/*","http://*/*"],
+            "css": [],
+            "js": ["popup.js"],
+            "html": ["popup.html"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
