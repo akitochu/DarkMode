@@ -13,7 +13,7 @@
     }
 
     .button{
-        background-color: tomato;
+        background-color: lightgreen;
         position: relative;
         display: flex;
         flex-direction:row;
@@ -22,11 +22,73 @@
         height: 2rem;
         width: 3.5rem;
         border-radius: 1rem;
+        cursor: pointer;
     }
 
     .row{
         padding: 10%;
+        cursor: pointer;
     }
+
+    .circle{
+        position:absolute;
+        top: 0;
+        left: 0;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        background-color: green;
+        cursor: pointer;
+    }
+
+    /*animations*/
+
+    @keyframes moveCircleRight {
+        from {
+            left: 0;
+            background-color:green;
+        }
+
+        to {
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: red;
+        }
+    }
+
+    @keyframes moveCircleLeft {
+        from {
+            left: 100%;
+            background-color:red;
+            transform: translateX(-100%);
+        }
+
+        to {
+            left: 0%;
+            background-color: green;
+        }
+    }
+
+    @keyframes changeBackgroundRed {
+        from {
+            background-color: tomato;
+        }
+
+        to {
+            background-color: lightgreen;
+        }
+    }
+
+    @keyframes changeBackgroundGreen {
+        from {
+            background-color: lightgreen;
+        }
+
+        to {
+            background-color: tomato;
+        }
+    }
+
 </style>
 <body>
     <h1></span>darkmode</span></h1>
@@ -34,6 +96,8 @@
     <div class="button">
         <div class="row">On</div>
         <div class="row">Off</div>
+        <div class="circle"></div>
     </div>
 </body>
+<script src="./popup.js"></script>
 </html>
